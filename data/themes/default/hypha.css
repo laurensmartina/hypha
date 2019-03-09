@@ -930,6 +930,20 @@ body.type_peer_reviewed_article .input-wrapper.field_type_editor:not(.field_name
 	height: 100px;
 }
 
+.selectedTags {
+    display: inline-block;
+}
+
+.selectedTags .delete-tag {
+    color: #8f0000;
+    cursor: pointer;
+}
+
+.remainingTags {
+    padding: 0;
+}
+
+
 .share-links{
     width: 116px;
     display: flex;

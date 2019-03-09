@@ -49,8 +49,9 @@
 		}
 
 		private function indexView(HyphaRequest $request) {
-			// setup page name and language list for the selected page
+			// setup language and tag list for the selected page
 			$this->html->writeToElement('langList', hypha_indexLanguages($this->pageListNode, $this->language));
+			$this->html->writeToElement('tagList', hypha_indexTags($this->pageListNode, $this->language));
 
 			// show content, and only allow access to previous revisions for logged in clients
 			$version = isUser() && $request->getPostValue(self::FIELD_NAME_VERSION);
