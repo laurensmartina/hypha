@@ -386,6 +386,7 @@
 		"art-email" => "email",
 		"art-author" => "author",
 		"art-excerpt" => "excerpt",
+		"art-featured-image" => "featured image",
 		"art-article" => "article",
 		"art-invalid-code" => "invalid code",
 
