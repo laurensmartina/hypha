@@ -194,6 +194,12 @@
 				$helpLanguage = isset($args[1]) ? $args[1] : $O_O->getInterfaceLanguage();
 				echo hypha_searchHelp($O_O, $subject, $helpLanguage);
 				exit;
+			case HyphaRequest::HYPHA_SYSTEM_PAGE_DELETE_UPLOADED_IMAGE:
+				$src = $O_O->getRequest()->getPostValue('src');
+				$success = unlink($src);
+				http_response_code($success ? 204 : 410);
+				echo json_encode($success);
+				exit;
 			case HyphaRequest::HYPHA_SYSTEM_PAGE_SETTINGS:
 				if (isUser() || $args[0]=='register') {
 					$hyphaPage = new settingspage($O_O);
